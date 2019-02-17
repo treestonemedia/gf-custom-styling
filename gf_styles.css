@@ -1,0 +1,593 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+/* Styles by Alex (06.03.2017) */
+/* Updated by Shmuel (02.17.2018) */
+
+/**
+ * Begin Styles for Gravity Forms
+ * Custom Gravity form styles prefix is gfs_
+ */
+
+/* Style list within one field to 2,3,4,5 columns - Gravity Forms */
+
+.gform_wrapper li.gfs_list_2col ul {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+}
+
+.gform_wrapper li.gfs_list_3col ul {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+}
+
+.gform_wrapper li.gfs_list_4col ul {
+    -webkit-column-count: 4;
+    -moz-column-count: 4;
+    column-count: 4;
+}
+
+.gform_wrapper li.gfs_list_5col ul {
+    -webkit-column-count: 5;
+    -moz-column-count: 5;
+    column-count: 5;
+}
+
+.gform_wrapper li.gfs_list_2col ul li,
+.gform_wrapper li.gfs_list_3col ul li,
+.gform_wrapper li.gfs_list_4col ul li,
+.gform_wrapper li.gfs_list_5col ul li {
+    width: inherit;
+    display: inline-block;
+}
+
+/* Style multiple fields to 2,3,4,5 column - Gravity Forms */
+
+.gform_wrapper ul.gform_fields li.gfield.gfs_one_half,
+.gform_wrapper ul.gform_fields li.gfield.gfs_one_third,
+.gform_wrapper ul.gform_fields li.gfield.gfs_one_quarter,
+.gform_wrapper ul.gform_fields li.gfield.gfs_one_fifth {
+    /*float:left;*/
+    clear: right !important;
+    display: inline-block;
+}
+
+.gform_wrapper ul.gform_fields li.gfield.gfs_one_half {
+    width: 50%;
+}
+
+.gform_wrapper ul.gform_fields li.gfield.gfs_one_third {
+    width: 33.33%;
+}
+
+.gform_wrapper ul.gform_fields li.gfield.gfs_one_quarter {
+    width: 25%;
+}
+
+.gform_wrapper ul.gform_fields li.gfield.gfs_one_fifth {
+    width: 20%;
+}
+
+/* Gravity Forms Mobile Styles */
+
+@media only screen and (max-width: 1024px) {
+    .gform_wrapper li.gfs_list_4col ul,
+    .gform_wrapper li.gfs_list_5col ul {
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
+        column-count: 3;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .gform_wrapper li.gfs_list_3col ul,
+    .gform_wrapper li.gfs_list_4col ul,
+    .gform_wrapper li.gfs_list_5col ul {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .gform_wrapper li.gfs_list_2col ul,
+    .gform_wrapper li.gfs_list_3col ul,
+    .gform_wrapper li.gfs_list_4col ul,
+    .gform_wrapper li.gfs_list_5col ul {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+    }
+
+    .gform_wrapper li.gfs_list_2col ul li,
+    .gform_wrapper li.gfs_list_3col ul li,
+    .gform_wrapper li.gfs_list_4col ul li,
+    .gform_wrapper li.gfs_list_5col ul li {
+        width: 100% !important;
+    }
+
+    .gform_wrapper ul.gform_fields li.gfield.gfs_one_half,
+    .gform_wrapper ul.gform_fields li.gfield.gfs_one_third,
+    .gform_wrapper ul.gform_fields li.gfield.gfs_one_quarter,
+    .gform_wrapper ul.gform_fields li.gfield.gfs_one_fifth {
+        width: 100% !important;
+        clear: both !important;
+    }
+
+    .gform_wrapper ul.gfield_checkbox li label,
+    .gform_wrapper ul.gfield_radio li label {
+        width: auto !important;
+        padding-top: 2px !important;
+    }
+}
+
+/* Rating fields start */
+.gsurvey-rating-wrapper {
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.gsurvey-rating-wrapper .gsurvey-rating > label {
+    margin-right: 10px;
+}
+
+.gsurvey-rating-wrapper .gsurvey-rating:not(:checked) > label {
+    font-size: 40px !important;
+}
+
+.gsurvey-rating-wrapper .gsurvey-rating:not(:checked) > label,
+.gsurvey-rating-wrapper .gsurvey-rating:not(:checked) > label:hover,
+.gsurvey-rating-wrapper .gsurvey-rating:not(:checked) > label:hover ~ label,
+.gsurvey-rating-wrapper .gsurvey-rating > input:checked ~ label {
+    width: 40px;
+    line-height: 40px;
+    background-size: 40px 40px;
+}
+
+@media only screen and (max-width: 767px) {
+    .gsurvey-rating-wrapper .gsurvey-rating:not(:checked) > label {
+        font-size: 30px !important;
+    }
+
+    .gsurvey-rating-wrapper .gsurvey-rating:not(:checked) > label,
+    .gsurvey-rating-wrapper .gsurvey-rating:not(:checked) > label:hover,
+    .gsurvey-rating-wrapper .gsurvey-rating:not(:checked) > label:hover ~ label,
+    .gsurvey-rating-wrapper .gsurvey-rating > input:checked ~ label {
+        width: 30px;
+        line-height: 30px;
+        background-size: 30px 30px;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .ginput_container_likert table.gsurvey-likert th.gsurvey-likert-row-label:first-child {
+        width: 235px;
+    }
+
+    .ginput_container_likert table.gsurvey-likert td {
+        height: 60px;
+    }
+
+    .ginput_container_likert table.gsurvey-likert .gsurvey-likert-row-label {
+        text-align: left;
+        font-weight: 400;
+        padding-left: 10px;
+    }
+}
+
+/* General styles for fields */
+
+body .gform_wrapper {
+    font-family: Lato, LatoDraft, Helvetica, Arial, sans-serif;
+}
+
+body .gform_wrapper .gform_heading,
+body .gform_wrapper .gform_footer {
+    /*padding-left: 17px;*/
+    padding-right: 17px;
+}
+
+body .gform_wrapper .gform_heading h3 {
+    font-family: Lato, LatoDraft, Helvetica, Arial, sans-serif;
+    font-size: 34px;
+    color: #222;
+    font-weight: 400;
+}
+
+body .gform_wrapper label.gfield_label {
+    font-weight: 400;
+}
+
+body .gform_wrapper table {
+    margin-bottom: 0;
+}
+
+body .gform_wrapper .top_label .gfield_label {
+    font-size: 20px;
+    color: #000;
+}
+
+body .gform_wrapper ul.gform_fields {
+    margin-right: -8px !important;
+    margin-left: -8px !important;
+}
+
+body .gform_wrapper ul.gform_fields li.gfield,
+body .gform_wrapper .top_label li.gfield.gf_left_half,
+body .gform_wrapper .top_label li.gfield.gf_right_half {
+    padding: 16px 8px;
+    margin-top: 2px;
+}
+
+body .gform_wrapper ul.gform_fields li.gsection {
+    margin-left: 8px !important;
+    margin-right: 8px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+body .gform_wrapper h2.gsection_title,
+body .gform_wrapper h3.gform_title {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+body .gform_wrapper .gf_progressbar {
+    width: 100%;
+}
+
+body .gform_wrapper ul.gform_fields li.gfield.gfs_sub_field {
+    padding-top: 0;
+    margin-top: 0;
+}
+
+body .gform_wrapper ul.gform_fields li.gfs_sub_field .gfield_label {
+    font-size: 16px;
+}
+
+body .gform_wrapper input[type=text],
+body .gform_wrapper input[type=password],
+body .gform_wrapper input[type=tel],
+body .gform_wrapper input[type=email],
+body .gform_wrapper input.text,
+body .gform_wrapper input.title,
+body .gform_wrapper select,
+body .gform_wrapper textarea,
+body .gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]),
+body .gform_wrapper.gf_browser_chrome select {
+    background-color: rgba(249, 249, 252, 1.0);
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 0 5px;
+    height: 40px;
+    color: #222;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    -webkit-appearance: none;
+}
+
+body .gform_wrapper input[type=text]:focus,
+body .gform_wrapper input[type=password]:focus,
+body .gform_wrapper input[type=tel]:focus,
+body .gform_wrapper input[type=email]:focus,
+body .gform_wrapper input.text:focus,
+body .gform_wrapper input.title:focus,
+body .gform_wrapper select:focus,
+body .gform_wrapper textarea:focus {
+    box-shadow: 0 2px 0 #007dc3 !important;
+    border-color: #007dc3 !important;
+}
+
+body .gform_wrapper textarea {
+    line-height: 1.5;
+    padding: 9px 5px 8px;
+}
+
+body .gform_wrapper .gfs_short_p textarea {
+    height: 40px;
+}
+
+body .gform_wrapper .gfield_description,
+body .gform_wrapper .description_above .gfield_description {
+    color: rgba(0, 0, 0, 0.5);
+    padding-top: 5px;
+    padding-bottom: 0;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+body .gform_wrapper select,
+body .gform_wrapper .ginput_container_date input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    background-image: url(images/select-arrow.svg);
+    background-repeat: no-repeat;
+    background-position: 96% 50%;
+}
+
+body .gform_wrapper select::-ms-expand {
+    display: none;
+}
+
+body .gform_wrapper select {
+    background-position: 98% 50%;
+}
+
+body .gform_wrapper .ginput_container_date input:hover {
+    cursor: pointer;
+    background-image: url(images/select-arrow-dark.svg);
+}
+
+body .gform_wrapper .ginput_container_date input::-webkit-input-placeholder {
+    opacity: 1;
+    color: #222;
+}
+
+body .gform_wrapper .ginput_container_date input::-moz-placeholder {
+    opacity: 1;
+    color: #222;
+}
+
+body .gform_wrapper .ginput_container_date input:-ms-input-placeholder {
+    opacity: 1;
+    color: #222;
+}
+
+body .gform_wrapper .ginput_container_date input:-moz-placeholder {
+    opacity: 1;
+    color: #222;
+}
+
+body .gform_wrapper select > option {
+    line-height: 1.5;
+    padding: 0 5px;
+}
+
+body .gform_wrapper .gform_footer input.button,
+body .gform_wrapper .gform_footer input[type=submit],
+body .gform_wrapper .gform_page_footer input.button,
+body .gform_wrapper .gform_page_footer input[type=submit] {
+    color: #ffffff;
+    background-image: url(images/arrow-right.svg);
+    background-color: #007dc3;
+    background-repeat: no-repeat;
+    background-position: 50% 55%;
+    font-size: 20px;
+    border: none;
+    padding: 0 1em !important;
+    line-height: 45px;
+    height: 45px;
+    border-radius: 2px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    position: relative;
+}
+
+body .gform_wrapper .gform_footer input.button:hover,
+body .gform_wrapper .gform_footer input[type=submit]:hover,
+body .gform_wrapper .gform_page_footer input.button:hover,
+body .gform_wrapper .gform_page_footer input[type=submit]:hover {
+    padding-left: 0.7em !important;
+    padding-right: 2em !important;
+    /*box-shadow: 0 0 0 2px #007dc3;*/
+    background-position: 90% 50%;
+    background-image: url(images/arrow-right-white.svg);
+}
+
+body .gform_wrapper .gform_footer input.button.gform_previous_button,
+body .gform_wrapper .gform_footer input[type=submit].gform_previous_button,
+body .gform_wrapper .gform_page_footer input.button.gform_previous_button,
+body .gform_wrapper .gform_page_footer input[type=submit].gform_previous_button {
+    background-image: url(images/arrow-left.svg);
+}
+
+body .gform_wrapper .gform_footer input.button.gform_previous_button:hover,
+body .gform_wrapper .gform_footer input[type=submit].gform_previous_button:hover,
+body .gform_wrapper .gform_page_footer input.button.gform_previous_button:hover,
+body .gform_wrapper .gform_page_footer input[type=submit].gform_previous_button:hover {
+    padding-right: 0.7em !important;
+    padding-left: 2em !important;
+    background-position: 10% 50%;
+    background-image: url(images/arrow-left-white.svg);
+}
+
+body .gform_wrapper .ginput_container_radio input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
+    font-size: 0.875em;
+    height: 30px;
+}
+
+body .gform_wrapper ul.gfield_checkbox li,
+body .gform_wrapper ul.gfield_radio li {
+    overflow: visible !important;
+    font-size: 18px !important;
+}
+
+body .gform_wrapper.gf_browser_chrome .gfield_checkbox li input,
+body .gform_wrapper.gf_browser_chrome .gfield_checkbox li input[type=checkbox],
+body .gform_wrapper.gf_browser_chrome .gfield_radio li input[type=radio] {
+    margin-top: 3px;
+}
+
+body .gform_wrapper .gfield_checkbox li input[type=checkbox],
+body .gform_wrapper .gfield_radio li input[type=radio] {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    opacity: 0;
+    z-index: 3;
+    cursor: pointer;
+}
+
+body .gform_wrapper ul.gfield_radio li label.other-label {
+    float: left;
+    margin-top: 6px;
+}
+
+body .gform_wrapper .gfield_checkbox li label,
+body .gform_wrapper ul.gfield_radio li label {
+    position: relative;
+    padding-left: 25px;
+    margin-left: 0;
+    padding-top: 2px;
+}
+
+body .gform_wrapper .gfield_checkbox li label:before,
+body .gform_wrapper .gfield_checkbox li label:after,
+body .gform_wrapper ul.gfield_radio li label:before,
+body .gform_wrapper ul.gfield_radio li label:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    z-index: 2;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+
+}
+
+body .gform_wrapper .gfield_checkbox li label:before,
+body .gform_wrapper ul.gfield_radio li label:before {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    width: 15px;
+    height: 15px;
+    top: 5px;
+}
+
+body .gform_wrapper ul.gfield_radio li label:before {
+    border-radius: 8px;
+}
+
+body .gform_wrapper .gfield_checkbox li label:after {
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 20px 20px;
+    background-image: url(images/check.svg);
+    opacity: 0;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    /*top: -3px;*/
+}
+
+body .gform_wrapper .gfield_checkbox li input:checked + label:after,
+body .gform_wrapper ul.gfield_radio li input:checked + label:after {
+    opacity: 1;
+}
+
+body .gform_wrapper ul.gfield_radio li label:after {
+    width: 7px;
+    height: 7px;
+    left: 4px;
+    top: 9px;
+    border-radius: 4px;
+    background: #007dc3;
+    opacity: 0;
+}
+
+body .gform_wrapper ul.gfield_checkbox li:before,
+body .gform_wrapper ul.gfield_radio li:before {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 10px;
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.2);
+    left: 1px;
+    top: 8px;
+    z-index: 1;
+    opacity: 0;
+}
+
+body .gform_wrapper ul.gfield_checkbox li:before {
+    top: 6px;
+}
+
+body .gform_wrapper ul.gfield_checkbox li.isActive:before,
+body .gform_wrapper ul.gfield_radio li.isActive:before {
+    -webkit-animation-name: pulse;
+    animation-name: pulse;
+    -webkit-animation-duration: 0.35s;
+    animation-duration: 0.35s;
+}
+
+body .gform_wrapper li.gfield.gfield_error {
+    background-color: transparent;
+    border-top: none;
+    border-bottom: none;
+}
+
+body .gform_wrapper li.gfield.gfield_error .validation_message {
+    color: #bc1d1d;
+}
+
+body .gform_wrapper li.gfield.gfield_error input[type=text],
+body .gform_wrapper li.gfield.gfield_error input[type=password],
+body .gform_wrapper li.gfield.gfield_error input[type=tel],
+body .gform_wrapper li.gfield.gfield_error input[type=email],
+body .gform_wrapper li.gfield.gfield_error input.text,
+body .gform_wrapper li.gfield.gfield_error input.title,
+body .gform_wrapper li.gfield.gfield_error select,
+body .gform_wrapper li.gfield.gfield_error textarea,
+body .gform_wrapper li.gfield.gfield_error input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]),
+body .gform_wrapper.gf_browser_chrome li.gfield.gfield_error select {
+    background-color: rgba(255, 223, 224, .25);
+    border: none;
+    border-bottom: 1px solid #bc1d1d;
+}
+
+body .gform_wrapper li.gfield.gfield_error input[type=text]:focus,
+body .gform_wrapper li.gfield.gfield_error input[type=password]:focus,
+body .gform_wrapper li.gfield.gfield_error input[type=tel]:focus,
+body .gform_wrapper li.gfield.gfield_error input[type=email]:focus,
+body .gform_wrapper li.gfield.gfield_error input.text:focus,
+body .gform_wrapper li.gfield.gfield_error input.title:focus,
+body .gform_wrapper li.gfield.gfield_error select:focus,
+body .gform_wrapper li.gfield.gfield_error textarea:focus {
+    box-shadow: 0 2px 0 #bc1d1d !important;
+    border-color: #bc1d1d !important;
+}
+
+body .gform_wrapper div.validation_error {
+    display: none !important;
+}
+
+body .gform_wrapper li.gfield.gfield_error label {
+    color: #bc1d1d;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(2.5);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes pulse {
+    0% {
+        -webkit-transform: scale(1);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: scale(2.5);
+        opacity: 0.7;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    body .gform_wrapper ul.gfield_checkbox li:before {
+        top: 7px;
+    }
+}
+
+/* End Styles for Gravity Forms  */

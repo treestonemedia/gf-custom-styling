@@ -369,7 +369,8 @@ body .gform_wrapper .gform_page_footer input[type=submit]:hover {
     padding-left: 0.7em !important;
     padding-right: 2em !important;
     /*box-shadow: 0 0 0 2px #007dc3;*/
-    background: url(../images/arrow-right-white.svg) 90% 50%;
+    background: url(../images/arrow-right-white.svg) 90% 50% no-repeat;
+    background-color: #007dc3;
 }
 
 body .gform_wrapper .gform_footer input.button.gform_previous_button,
